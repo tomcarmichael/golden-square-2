@@ -9,7 +9,7 @@ I want to see an estimate of reading time for a text, assuming that I can read 2
 
 ## Design the Method Signature
 
-reading_time = estimate_reading_time(text)
+`reading_time = estimate_reading_time(text)`
 
 text: a string, the text that needs to be read
 reading_time = a float, the estimated number of minutes to read
