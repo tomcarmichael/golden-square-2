@@ -8,15 +8,16 @@ RSpec.describe MyTracks do
   end
 
   context "returns tracks added to list" do
-    xit "returns 1 track" do
+    it "returns 1 track" do
       favs = MyTracks.new
       favs.add("lean on me")
       expect(favs.list).to eq ["lean on me"]
     end
 
-    xit "returns 2 tracks" do
+    it "returns 2 tracks" do
       favs = MyTracks.new
-      favs.add("lean on me", "still T.D.D")
+      favs.add("lean on me")
+      favs.add("still T.D.D")
       expect(favs.list).to eq ["lean on me", "still T.D.D"]
     end
   end
