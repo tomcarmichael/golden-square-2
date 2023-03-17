@@ -23,17 +23,17 @@ RSpec.describe MyTracks do
   end
 
   context "Throws an error" do
-    xit "returns error if empty string" do
+    it "returns error if empty string" do
       favs = MyTracks.new
       expect { favs.add("") }.to raise_error "Can't save empty string"
     end
 
-    xit "returns error if given integer" do
+    it "returns error if given integer" do
       favs = MyTracks.new
       expect { favs.add(2) }.to raise_error "Must be a string"
     end
 
-    xit "returns error if given nil" do
+    it "returns error if given nil" do
       favs = MyTracks.new
       expect { favs.add }.to raise_error "Must be a string"
     end
