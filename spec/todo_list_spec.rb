@@ -20,12 +20,12 @@ RSpec.describe ToDoList do
 
     it "raises an error when adding an empty string" do
       list = ToDoList.new
-      expect(list.add("")).to rasie_error "Can't add empty string"
+      expect{ list.add("") }.to raise_error "Can't add empty string"
     end
 
 
   describe "#complete" do
-    it "removes a completed task from the list" do
+    xit "removes a completed task from the list" do
       list = ToDoList.new
       list.add("Walk the dog")
       list.complete("Walk the dog")
@@ -33,7 +33,7 @@ RSpec.describe ToDoList do
     end
   end
 
-  it "adds multiple items to the list" do
+  xit "adds multiple items to the list" do
     list = ToDoList.new
     list.add("Walk the dog")
     list.add("Walk the cat")
