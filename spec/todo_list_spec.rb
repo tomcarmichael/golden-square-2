@@ -30,15 +30,15 @@ RSpec.describe ToDoList do
 
 
   describe "#complete" do
-    xit "removes a completed task from the list" do
+    it "removes a completed task from the list" do
       list = ToDoList.new
       list.add("Walk the dog")
       list.complete("Walk the dog")
-      expect.(list.list_tasks).to eq []
+      expect(list.list_tasks).to eq []
     end
   end
 
-  xit "adds multiple items to the list" do
+  it "adds multiple items to the list" do
     list = ToDoList.new
     list.add("Walk the dog")
     list.add("Walk the cat")

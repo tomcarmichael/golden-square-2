@@ -13,4 +13,8 @@ class ToDoList
   def list_tasks
     @tasks
   end
+
+  def complete(task)
+    @tasks.delete(task)
+  end
 end
