@@ -5,6 +5,7 @@ class ToDoList
   end
 
   def add(task)
+    fail "Argument must be a string" unless task.is_a? String
     fail "Can't add empty string" if task.empty?
     @tasks << task
   end

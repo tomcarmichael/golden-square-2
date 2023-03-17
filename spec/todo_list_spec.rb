@@ -23,6 +23,11 @@ RSpec.describe ToDoList do
       expect{ list.add("") }.to raise_error "Can't add empty string"
     end
 
+    it "raises an error when adding anything but a string" do
+      list = ToDoList.new
+      expect{ list.add(4) }.to raise_error "Argument must be a string"
+    end
+
 
   describe "#complete" do
     xit "removes a completed task from the list" do
