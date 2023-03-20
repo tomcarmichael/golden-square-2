@@ -1,20 +1,28 @@
-class ToDoList
-
+# File: lib/todo_list.rb
+class TodoList
   def initialize
-    @tasks = [] 
+    @todos = []
   end
 
-  def add(task)
-    fail "Argument must be a string" unless task.is_a? String
-    fail "Can't add empty string" if task.empty?
-    @tasks << task
+  def add(todo) # todo is an instance of Todo
+    @todos << todo
   end
 
-  def list_tasks
-    @tasks
+  def incomplete
+    @todos.select do |todo|
+      todo.done? == false
+    end
   end
 
-  def complete(task)
-    @tasks.delete(task)
+  def complete
+    @todos.select do |todo|
+      todo.done?
+    end
+  end
+
+  def give_up!
+    @todos.each do |todo|
+      todo.mark_done!
+    end
   end
 end
